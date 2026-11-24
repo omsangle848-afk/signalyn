@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Signalyn — Find buyers the moment they ask</title>
+<meta name="description" content="Signalyn's AI watches public conversations, spots people ready to buy, and drafts the first message for you. Plans from ₹99.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+
+<header class="nav">
+  <a class="logo" href="#top"><span class="dot"></span>Signalyn</a>
+  <nav>
+    <a href="#how">How it works</a>
+    <a href="#demo">Try it</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <a class="btn small" href="#demo">Start free</a>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <p class="chip">AI buyer-intent radar</p>
+    <h1>Your next customer is<br><em>asking for you</em> right now.</h1>
+    <p class="sub">Signalyn scans public conversations, finds people looking for what you sell, and writes the first message — so you reply while they're still deciding.</p>
+    <div class="cta">
+      <a class="btn" href="#demo">Try the AI free</a>
+      <a class="btn ghost" href="#pricing">See plans from ₹99</a>
+    </div>
+    <div class="stats">
+      <div><b data-count="20">0</b>+<span>platforms covered</span></div>
+      <div><b data-count="24">0</b>/7<span>nightly scans</span></div>
+      <div><b data-count="60">0</b>s<span>to your first leads</span></div>
+    </div>
+    <p class="hint">Move your mouse — the signal network follows you.</p>
+  </section>
+
+  <section id="how" class="section">
+    <h2>Three steps. No cold-calling.</h2>
+    <div class="grid3">
+      <article class="card tilt"><span class="num">01</span><h3>Describe your product</h3><p>Tell the AI what you sell in a sentence. It builds your ideal-customer profile instantly.</p></article>
+      <article class="card tilt"><span class="num">02</span><h3>Radar finds intent</h3><p>It lists the exact phrases and places where real buyers ask for recommendations or complain about alternatives.</p></article>
+      <article class="card tilt"><span class="num">03</span><h3>Send a human message</h3><p>Get short, non-spammy drafts for each prospect. You review and send — nothing goes out without you.</p></article>
+    </div>
+  </section>
+
+  <section id="demo" class="section">
+    <h2>Try the AI radar</h2>
+    <p class="muted">Free runs are limited. Paid plans unlock more platforms, more drafts and competitor insight.</p>
+    <div class="panel">
+      <label for="product">What do you sell?</label>
+      <textarea id="product" rows="3" maxlength="600" placeholder="e.g. A mobile app that helps small restaurants manage online orders and reduce commission fees"></textarea>
+      <div class="row">
+        <button id="run" class="btn">Find buyers</button>
+        <span id="planBadge" class="badge">Free trial</span>
+      </div>
+      <div id="out" class="out" hidden></div>
+    </div>
+  </section>
+
+  <section id="pricing" class="section">
+    <h2>Simple pricing, built for India</h2>
+    <p class="muted">Pay once per month. Cancel anytime. Prices in INR.</p>
+    <div class="grid4">
+      <article class="card plan tilt">
+        <h3>Free trial</h3><div class="price">₹0</div>
+        <ul><li>3 AI runs / hour</li><li>3 platforms</li><li>1 outreach draft</li></ul>
+        <a class="btn ghost" href="#demo">Try now</a>
+      </article>
+      <article class="card plan tilt">
+        <h3>Starter</h3><div class="price">₹99<small>/mo</small></div>
+        <ul><li>More runs per hour</li><li>5 platforms</li><li>3 outreach drafts</li></ul>
+        <button class="btn ghost buy" data-plan="starter">Get Starter</button>
+      </article>
+      <article class="card plan tilt featured">
+        <span class="ribbon">Most popular</span>
+        <h3>Pro</h3><div class="price">₹499<small>/mo</small></div>
+        <ul><li>12 platforms</li><li>8 outreach drafts</li><li>Competitor insight</li><li>Compliance tips</li></ul>
+        <button class="btn buy" data-plan="pro">Go Pro</button>
+      </article>
+      <article class="card plan tilt">
+        <h3>Scale</h3><div class="price">₹999<small>/mo</small></div>
+        <ul><li>20 platforms</li><li>15 outreach drafts</li><li>Competitor insight</li><li>Priority AI</li></ul>
+        <button class="btn ghost buy" data-plan="scale">Get Scale</button>
+      </article>
+    </div>
+    <p id="payMsg" class="muted" role="status"></p>
+  </section>
+
+  <section id="faq" class="section narrow">
+    <h2>Questions</h2>
+    <details><summary>Does Signalyn send messages for me?</summary><p>No. It drafts; you review and send. That keeps you in control and inside each community's rules.</p></details>
+    <details><summary>Is payment safe?</summary><p>Payments run through Razorpay. We never see or store your card or UPI details.</p></details>
+    <details><summary>Which platforms are covered?</summary><p>Social networks, communities, review sites and the open web, depending on your plan.</p></details>
+    <details><summary>Can I cancel?</summary><p>Plans are one-time 30-day passes. They simply expire — no surprise renewals.</p></details>
+  </section>
+</main>
+
+<footer><span>© <span id="yr"></span> Signalyn</span><span>Made in India 🇮🇳</span></footer>
+
+<script type="module" src="/app.js"></script>
+</body>
+</html>
