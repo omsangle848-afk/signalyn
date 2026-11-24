@@ -1,0 +1,18 @@
+# Render Blueprint: one-click deploy (Render dashboard -> New -> Blueprint -> pick this repo)
+services:
+  - type: web
+    name: signalyn
+    runtime: node
+    plan: free
+    buildCommand: echo "no build needed"
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    envVars:
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: RAZORPAY_KEY_ID
+        sync: false
+      - key: RAZORPAY_KEY_SECRET
+        sync: false
