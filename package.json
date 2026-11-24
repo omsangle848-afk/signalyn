@@ -1,0 +1,8 @@
+{
+  "name": "signalyn",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI buyer-intent finder with 3D landing page, Claude backend and Razorpay plans",
+  "engines": { "node": ">=18" },
+  "scripts": { "dev": "node server.js" }
+}
